@@ -12,7 +12,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-dag = DAG(dag_id='FirstDAG', default_args=default_args, schedule_interval='@once', catchup=False)
+dag = DAG(dag_id='Test1', default_args=default_args, schedule_interval='@once', catchup=False)
 
 start = DummyOperator(task_id='start', dag=dag)
 end = DummyOperator(task_id='end', dag=dag)
